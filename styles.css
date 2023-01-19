@@ -29,3 +29,39 @@ body {
   width: 200px;
 
 }
+
+.buttons .newBook {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.buttons .newBook:hover {
+  background-color: gray;
+  color: white;
+}
+
+.form {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  border: 2px solid black;
+
+  flex-direction: column;
+  width: 260px;
+  height: 150px;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 10px gray;
+}
+
+.form button {
+  width: 100px;
+  padding: 8px 16px;
+  margin: 0 auto;
+  border-radius: 5px;
+}

@@ -1,4 +1,7 @@
 const container = document.querySelector('.container');
+const newBook = document.querySelector('.newBook');
+const form = document.querySelector('.form');
+const enterBtn = document.querySelector('.enterBtn');
 
 let myLibrary = [];
 
@@ -18,7 +21,13 @@ const moontoon = new Book('Chou', 'MLBB', '192');
 myLibrary.push(theHobbit);
 myLibrary.push(moontoon);
 
-function addBookToLibrary() {}
+function addBookToLibrary() {
+  let title = document.querySelector('#title').value;
+  let author = document.querySelector('#author').value;
+  let pages = document.querySelector('#pages').value;
+
+  myLibrary.push(new Book(title, author, pages));
+}
 
 function displayBook() {
   myLibrary.forEach((book) => {
@@ -38,3 +47,12 @@ function displayBook() {
 }
 
 displayBook();
+
+newBook.addEventListener('click', () => {
+  form.style.display = 'flex';
+});
+
+enterBtn.addEventListener('click', () => {
+  addBookToLibrary();
+  form.style.display = 'none';
+});
